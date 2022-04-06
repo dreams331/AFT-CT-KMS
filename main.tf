@@ -1,3 +1,8 @@
+provider "aws" {
+  alias  = "replica"
+  region = var.replica_region
+}
+
 resource "aws_kms_key" "primary" {
   multi_region             = true
   description              = var.description
